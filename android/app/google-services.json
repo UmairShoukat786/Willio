@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183841680988",
+    "project_id": "willio-c9928",
+    "storage_bucket": "willio-c9928.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183841680988:android:a2f34fafb16e5825480099",
+        "android_client_info": {
+          "package_name": "com.willio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATeCs6WVE7ypQUywXz4JNEe3jP9tloB34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
