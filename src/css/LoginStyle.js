@@ -16,7 +16,6 @@ const LoginStyle = StyleSheet.create({
     txt: { color: 'black', fontWeight: 'bold' },
     main:{height:'auto'}
 });
-/////////////dydhjdjshfhsfhdhdfjdnfhfnfhfnfbghbhd///////dhbhnjndnf
-/////ffjdfdjfdjfdhfdfjdnfdnfjdfsjfnfffgfsv v  h dgjngjdnhbfsmdndjnddjndmkmkmmnmkdmfkdmkfm
+
 
 export default LoginStyle;
