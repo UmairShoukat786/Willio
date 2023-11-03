@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, FlatList, Text, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Heading from '../components/Heading';
-import Bottom from '../components/Bottom';
+
 
 const items = [
     {
@@ -47,13 +47,27 @@ const items = [
         itempic: require('../assets/images/science.jpeg'),
         description: "Today's Doodle celebrates Pakistani artist, writer, and actor Farooq Qaiser",
     },
+    {
+        id: 8,
+        title: 'Alpha',
+        displaypic: require('../assets/images/science.jpeg'),
+        itempic: require('../assets/images/science.jpeg'),
+        description: "Today's Doodle celebrates Pakistani artist, writer, and actor Farooq Qaiser",
+    },
+    {
+        id: 9,
+        title: 'Alpha',
+        displaypic: require('../assets/images/science.jpeg'),
+        itempic: require('../assets/images/science.jpeg'),
+        description: "Today's Doodle celebrates Pakistani artist, writer, and actor Farooq Qaiser",
+    },
 ];
 
 const Additems = () => {
     return (
         <View style={styles.container}>
             <Heading />
-            <View>
+            <View style={{marginBottom:100}}>
             <FlatList
                 data={items}
                 numColumns={2} // Display two cards per row
@@ -75,13 +89,13 @@ const Additems = () => {
                 keyExtractor={(item) => item.id.toString()}
             />
             </View>
-            <Bottom/>
+        
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-  
+  container:{flex:1},
     card: {
         backgroundColor: 'white',
         borderRadius: 10,
