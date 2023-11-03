@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, FlatList, Text, Image } from 'react-native';
+import { StyleSheet, View, FlatList, Text, Image,TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Heading from '../components/Heading';
+
 
 
 const items = [
@@ -63,7 +64,7 @@ const items = [
     },
 ];
 
-const Additems = () => {
+const Additems = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Heading />
@@ -73,17 +74,19 @@ const Additems = () => {
                 numColumns={2} // Display two cards per row
                 renderItem={({ item }) => (
                     <View style={styles.card}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Edititem',{item})}>
                         <Image source={item.itempic} style={styles.cardImage} />
                         <View style={styles.titleContainer}>
                             <Image source={item.displaypic} style={styles.displaypic} />
                             <Text style={styles.cardTitle}>{item.title}</Text>
-                            <View style={item.id % 2 === 0 ? styles.iconEven : styles.iconOdd}>
-                                <Ionicons name='heart' size={12} style={styles.icon} />
-                            </View>
+                                <View style={item.id % 2 === 0 ? styles.iconEven : styles.iconOdd}>
+                                    <Ionicons name='heart' size={12} style={styles.icon} />
+                                </View>
                         </View>
 
                         <Text style={styles.cardDescription}>{item.description}</Text>
                         <Text style={styles.tags}>#des #sed #wed</Text>
+                        </TouchableOpacity>
                     </View>
                 )}
                 keyExtractor={(item) => item.id.toString()}

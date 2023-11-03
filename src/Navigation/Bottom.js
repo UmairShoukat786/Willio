@@ -4,6 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Itemlist from '../screens/Itemslist';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
+import Edititem from '../screens/Edititem';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,8 +38,8 @@ const Bottom = () => {
                 }}
             />
             <Tab.Screen
-                name="Login"
-                component={Login}
+                name="Edititem"
+                component={Edititem}
                 options={{
                     headerShown: false,
                     tabBarLabel: 'Profile',
