@@ -2,9 +2,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Itemlist from '../screens/Itemslist';
-import Login from '../screens/Login';
-import Signup from '../screens/Signup';
 import Edititem from '../screens/Edititem';
+import Additems from '../screens/Additems';
+import Signup from '../screens/Signup';
 
 const Tab = createBottomTabNavigator();
 
@@ -38,8 +38,8 @@ const Bottom = () => {
                 }}
             />
             <Tab.Screen
-                name="Edititem"
-                component={Edititem}
+                name="Additems"
+                component={Additems}
                 options={{
                     headerShown: false,
                     tabBarLabel: 'Profile',

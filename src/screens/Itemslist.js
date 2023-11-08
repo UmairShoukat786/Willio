@@ -64,7 +64,7 @@ const items = [
     },
 ];
 
-const Additems = ({navigation}) => {
+const Itemlist = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Heading />
@@ -173,4 +173,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Additems;
+export default Itemlist;

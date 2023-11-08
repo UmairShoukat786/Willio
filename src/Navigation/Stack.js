@@ -26,7 +26,7 @@ const Stacked = () => {
         <Stack.Navigator>
 
             <Stack.Screen name="Additems" component={Bottom} options={{ headerShown: false }}  />
-            <Stack.Screen name="Signup" component={Bottom} options={{ headerShown: false }} />
+            <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false }} />
             <Stack.Screen name="Login" component={Bottom} options={{ headerShown: false }} />
             <Stack.Screen name="Bottom" component={Bottom} />
 
