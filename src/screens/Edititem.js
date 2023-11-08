@@ -4,23 +4,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Evilicons from 'react-native-vector-icons/EvilIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Model from '../components/Modal';
+
 
 const Edititem = ({ navigation, route }) => {
     const { item } = route.params;
     const [isHovered, setIsHovered] = useState(false);
-    // const [isUpdateModalVisible, setUpdateModalVisible] = useState(false);
-    // const [userInput, setUserInput] = useState('');
-    // const [updatedName, setUpdatedName] = useState('');
-
-    // const toggleModal = () => {
-    //     setUpdateModalVisible(true);
-    // };
-
-    // const handleUpdate = (newName) => {
-    //     setUpdatedName(newName);
-    // };
-
     return (
         <View>
             <View style={{ flexDirection: 'row', margin: 10 }}>
@@ -69,13 +57,7 @@ const Edititem = ({ navigation, route }) => {
                     </View>
                 </View>
             </View>
-            {/* <Model
-                visible={isUpdateModalVisible}
-                onClose={() => setUpdateModalVisible(false)}
-                onUpdate={handleUpdate}
-                name={item.title}
-            />
-            {updatedName && <Text>Updated Name: {updatedName}</Text>} */}
+       
         </View>
     );
 };
