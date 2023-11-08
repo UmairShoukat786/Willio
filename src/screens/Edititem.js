@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Alert, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, Alert, TextInput, Button } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Evilicons from 'react-native-vector-icons/EvilIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Model from '../components/Modal';
 
 const Edititem = ({ navigation, route }) => {
     const { item } = route.params;
     const [isHovered, setIsHovered] = useState(false);
-    const [userInput, setUserInput] = useState('');
+    // const [isUpdateModalVisible, setUpdateModalVisible] = useState(false);
+    // const [userInput, setUserInput] = useState('');
+    // const [updatedName, setUpdatedName] = useState('');
 
-    const handlePencilClick = () => {
-        Alert.alert('Write on the item image', `You wrote: ${userInput}`);
-    };
+    // const toggleModal = () => {
+    //     setUpdateModalVisible(true);
+    // };
+
+    // const handleUpdate = (newName) => {
+    //     setUpdatedName(newName);
+    // };
 
     return (
         <View>
@@ -52,16 +59,23 @@ const Edititem = ({ navigation, route }) => {
                         </View>
                         <Text>------</Text>
                         <View style={[styles.iconOdd, { backgroundColor: '#EAFF87' }]}>
-                            <Evilicons name='pencil' size={20} color='#93EC00' onPress={handlePencilClick} />
+                            <Evilicons name='pencil' size={20} color='#93EC00'/>
                         </View>
                         <Text>------</Text>
                         <View style={[styles.iconOdd, { backgroundColor: '#FFFFFF' }]}>
-                            <MaterialCommunityIcons name='dots-horizontal' size={18} color='#000000' />
+                            <MaterialCommunityIcons name='dots-horizontal' size={18} color='#000000'/>
                         </View>
                         <Text>------</Text>
                     </View>
                 </View>
             </View>
+            {/* <Model
+                visible={isUpdateModalVisible}
+                onClose={() => setUpdateModalVisible(false)}
+                onUpdate={handleUpdate}
+                name={item.title}
+            />
+            {updatedName && <Text>Updated Name: {updatedName}</Text>} */}
         </View>
     );
 };
@@ -82,7 +96,7 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         borderRadius: 50,
-        marginLeft: 8
+        marginLeft: 8,
     },
     hoveredImage: {
         width: 70,
@@ -103,17 +117,17 @@ const styles = StyleSheet.create({
     tags: {
         fontSize: 15,
         marginTop: 2,
-        color: '#4F99DD'
+        color: '#4F99DD',
     },
     itemInfo: {
         marginTop: 10,
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     itemTitle: {
         fontSize: 20,
         fontWeight: 'bold',
         color: 'black',
-        marginTop: 8
+        marginTop: 8,
     },
     itemDescription: {
         fontSize: 14,
@@ -128,7 +142,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 2,
         borderRightWidth: 2,
         paddingHorizontal: 4.5,
-        paddingVertical: 4
+        paddingVertical: 4,
     },
     icon: {
         color: '#EE05AD',
@@ -137,7 +151,7 @@ const styles = StyleSheet.create({
         width: '80%',
     },
     iconcontain: {
-        left: 35
+        left: 35,
     },
 });
 
